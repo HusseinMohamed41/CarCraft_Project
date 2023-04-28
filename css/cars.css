@@ -33,6 +33,11 @@ input {
   caret-color: var(--secondary-color);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -246,7 +251,7 @@ header .form i {
   font-size: 20px;
   top: 50%;
   transform: translateY(-50%);
-  right: 150px;
+  right: 225px;
 }
 
 @media (max-width: 991px) {
@@ -275,6 +280,7 @@ nav .form a:hover {
 nav .form .wall {
   border-left: 1px solid #3b3b3b;
 }
+
 
 /* End header */
 /* Start Home */
@@ -439,7 +445,7 @@ nav .form .wall {
   align-items: center;
 }
 
-.popular-listing .container .text ul button {
+.popular-listing .container .text p {
   text-decoration: none;
   font-size: 15px;
   color: black;
@@ -448,7 +454,8 @@ nav .form .wall {
   background-color: #eff0f1;
   border: 1px solid #eff0f1;
   border-radius: 16px;
-  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+  background-color: #ffece6;
 }
 
 .popular-listing .container .text ul button:hover {
@@ -536,82 +543,80 @@ nav .form .wall {
 }
 
 /* End popular listing  */
-/* Start Categories */
-.categories {
+/* Start used-cars */
+.used-cars {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: #eff3fa;
 }
 
-.categories .container .text {
+.used-cars .container .text {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.categories .container .text h2 {
+.used-cars .container .text h2 {
   font-size: 40px;
   font-weight: bold;
 }
 
-.categories .container .text ul {
+.used-cars .container .text ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.categories .container .text ul button {
+.used-cars .container .text p {
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
   color: black;
   padding: 14px 40px;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: white;
-  border: 1px solid #eff0f1;
   border-radius: 16px;
-  cursor: pointer;
 }
 
-.categories .container .text ul button:hover {
+.used-cars .container .text ul button:hover {
   border: 1px solid var(--secondary-color);
   background-color: #ffece6;
 }
 
-.categories .container .text ul button:focus {
+.used-cars .container .text ul button:focus {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   background-color: #ffece6;
 }
 
-.categories .container .imgs-container {
+.used-cars .container .imgs-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.categories .container .imgs-container .box {
+.used-cars .container .imgs-container .box {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.categories .container .imgs-container .box a {
+.used-cars .container .imgs-container .box a {
   text-decoration: none;
   color: white;
 }
 
-.categories .container .imgs-container .box img {
+.used-cars .container .imgs-container .box img {
   width: 250px;
   border-radius: 5% 5% 0 0;
   transition: 0.5s;
 }
 
-.categories .container .imgs-container .box img:hover {
+.used-cars .container .imgs-container .box img:hover {
   transform: scale(1.1);
 }
 
-.categories .container .imgs-container .box .caption {
+.used-cars .container .imgs-container .box .caption {
   color: white;
   background-color: #222732;
   margin-top: -4px;
@@ -620,24 +625,24 @@ nav .form .wall {
   z-index: 2;
 }
 
-.categories .container .imgs-container .box .caption h4 {
+.used-cars .container .imgs-container .box .caption h4 {
   font-weight: normal;
   padding: 15px 10px;
   width: 250px;
   overflow: hidden;
 }
 
-.categories .container .imgs-container .box .caption span {
+.used-cars .container .imgs-container .box .caption span {
   font-weight: bold;
   padding: 10px;
 }
 
-.categories .container .imgs-container .box .caption span::before {
+.used-cars .container .imgs-container .box .caption span::before {
   content: '$';
   position: relative;
 }
 
-.categories .container .imgs-container .box .caption ul {
+.used-cars .container .imgs-container .box .caption ul {
   display: flex;
   justify-content: space-between;
   padding: 15px 5px;
@@ -646,30 +651,30 @@ nav .form .wall {
   font-size: 12px;
 }
 
-.categories .container .imgs-container .box li {
+.used-cars .container .imgs-container .box li {
   padding: 5px 10px;
 }
 
-.categories .container .imgs-container .box .caption ul li.active {
+.used-cars .container .imgs-container .box .caption ul li.active {
   background-color: var(--main-color);
   border-radius: 6px;
   color: black;
 }
 
-.categories .container i {
+.used-cars .container i {
   margin: 10px;
   position: relative;
   background-color: white;
   cursor: pointer;
 }
 
-.categories .fa-angle-left {
+.used-cars .fa-angle-left {
   left: 20px;
   padding: 10px 15px;
   border-radius: 50%;
 }
 
-.categories .fa-angle-right {
+.used-cars .fa-angle-right {
   left: 5px;
   padding: 10px 15px;
   border-radius: 50%;
@@ -726,7 +731,7 @@ nav .form .wall {
   text-align: center;
 }
 
-/* End Categories */
+/* End used-cars */
 /* Start Contact */
 .contact {
   padding-top: var(--section-padding);
@@ -1377,14 +1382,14 @@ nav .form .wall {
   background-color: #f2f2f2;
 }
 
-.sell-car form .description .main-input {
+/* .sell-car form .description .main-input {
   height: 150px;
   width: 60%;
   outline: none;
   padding: 10px;
   margin: 15px 10px;
   caret-color: var(--secondary-color);
-}
+} */
 
 
 .sell-car .container input[type=image] {
@@ -1585,11 +1590,11 @@ nav .form .wall {
 .search .slider ul {
   display: flex;
   align-items: center;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 
 .search .slider ul li {
-  margin-left: 10px;
+  margin-left: 5px;
   cursor: pointer;
   padding: 7px 14px;
   border-radius: 50%;
@@ -1607,6 +1612,7 @@ nav .form .wall {
   background-color: #ffece6;
   color: var(--secondary-color);
 }
+
 
 /* End Search */
 
@@ -1673,3 +1679,102 @@ nav .form .wall {
 }
 
 /* End Car view  */
+/* Start Profile */
+.profile {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: linear-gradient(to bottom, #eff3fa 17%, white 17%);
+}
+
+.profile .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.profile .title h4 {
+  font-size: 30px;
+}
+
+.profile .title button {
+  text-decoration: none;
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 10px;
+  font-size: 13px;
+  margin-right: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile .title button:hover {
+  border-color: var(--secondary-color);
+  background-color: #ffece6;
+}
+
+.profile h3 {
+  margin: 100px 0 30px 20px;
+  border-bottom: 1px solid var(--secondary-color);
+  width: fit-content;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+
+
+
+.profile .details {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 40px 80px;
+  background-color: #eff3fa;
+  width: 90%;
+}
+
+.profile .details p {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.profile .details label {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.profile .details input {
+  padding: 10px 20px;
+  border: none;
+  margin-bottom: 20px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px 0px rgba(196, 196, 196, 0.24);
+}
+
+
+.profile .details button {
+  width: 20%;
+  padding: 15px 20px;
+  margin-top: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile .delete {
+  margin-top: 20px;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  background-color: unset;
+}
+
+/* End Profile */
+
+/* Start Query  */
+.query {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* End Query  */

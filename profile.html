@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
   <!-- Start Header -->
   <header>
     <!-- <div class="container"> -->
@@ -29,16 +28,18 @@
       <img src="images/logo.png" alt="logo">
     </a>
     <nav>
-      <i class="fa-solid fa-bars toggle-menu"></i>
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="#categories">categories</a></li>
-        <li><a href="Sell-Car.html">Sell Car</a></li>
-        <li><a href="Compare-Cars.html">Compare Cars</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="query.html">Query Search</a></li>
-      </ul>
+      <div class="bars">
+        <i class="fa-solid fa-bars toggle-menu"></i>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#used-cars">Used cars</a></li>
+          <li><a href="Sell-Car.html">Sell Car</a></li>
+          <li><a href="Compare-Cars.html">Compare Cars</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="query.html">Query Search</a></li>
+        </ul>
+      </div>
       <div class="form">
         <i class="fa-regular fa-user"></i>
         <a href="login.html">Log in</a>
@@ -49,26 +50,28 @@
     <!-- </div> -->
   </header>
   <!-- End Header -->
-  <!-- Start login -->
-  <div class="login-page">
+  <!-- Start Profile  -->
+  <div class="profile">
     <div class="container">
-      <div class="login">
-        <h2>Log in to your account</h2>
-        <p>Welcome back! Sign in to your account</p>
-        <form action="">
-          <input class="input" type="email" name="name" placeholder="Email or Username">
-          <input class="input" type="password" name="password" placeholder="Password">
-        </form>
-        <div class="forget-password">
-          <input type="checkbox" name="Remember" id="checkbox">
-          <label for="checkbox">Remember</label>
-          <a href="#">Forgotten Password?</a>
-        </div>
-        <input type="submit" value="Login">
+      <div class="title">
+        <h4>Account</h4>
+        <button>Sign Out</button>
       </div>
+      <h3>Account Details</h3>
+      <div class="details">
+        <p>your contact details</p>
+        <label for="">Name*</label>
+        <input type="text">
+        <label for="">phone</label>
+        <input type="text">
+        <label for="">Email</label>
+        <input type="email" name="" id="">
+        <button>Save changes</button>
+      </div>
+      <button class="delete">Delete Account</button>
     </div>
   </div>
-  <!-- End login -->
+  <!-- End Profile  -->
   <!-- Start Footer -->
   <div class="footer">
     <div class="container">
@@ -101,6 +104,7 @@
     </div>
   </div>
   <!-- End Footer -->
+
 </body>
 
 </html>
