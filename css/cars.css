@@ -452,7 +452,7 @@ nav .form .prof {
 }
 
 .home .box .search-box .price select {
-  width: fit-content;
+  width: 106px;
   padding: 10px 15px;
   margin: 10px -18px;
   font-weight: normal;
