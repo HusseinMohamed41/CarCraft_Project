@@ -114,7 +114,36 @@ a {
 }
 
 /* End Components */
+.up {
+  position: fixed;
+  bottom: 19px;
+  left: 20px;
+  background-color: #42a5f5;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px 10px;
+  font-family: Arial, Tahoma;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.up.show {
+  right: 10px;
+}
+
 /* Start header */
+.bar header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+}
+
 header {
   position: relative;
   left: 0;
@@ -128,9 +157,21 @@ header {
 }
 
 header .logo img {
+  position: relative;
   height: 80px;
   width: 110px;
   margin-left: 25px;
+  margin-right: 10px;
+  z-index: 1;
+}
+
+header .logo p {
+  position: absolute;
+  z-index: 1;
+  top: 62px;
+  left: 45px;
+  color: wheat;
+  font-family: cursive;
 }
 
 @media (max-width: 991px) {
@@ -144,7 +185,6 @@ header .logo img {
 }
 
 header nav {
-
   flex: 1;
   display: flex;
   align-items: center;
@@ -232,7 +272,6 @@ header nav ul a.active {
 
 header nav ul a:hover {
   color: var(--main-color);
-  /* border-top: 1px solid var(--main-color); */
   padding-top: 20px;
 }
 
@@ -242,6 +281,7 @@ nav .form {
   top: 50%;
   transform: translatey(-50%);
   margin-right: 40px;
+  z-index: 1;
 }
 
 
@@ -279,6 +319,11 @@ nav .form a:hover {
 
 nav .form .wall {
   border-left: 1px solid #3b3b3b;
+}
+
+nav .form .prof {
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 
@@ -349,7 +394,7 @@ nav .form .wall {
 
 .home .box .search-box {
   width: 300px;
-  height: 350px;
+  height: 300px;
   background-color: white;
   position: relative;
   border-radius: 5%;
@@ -386,7 +431,7 @@ nav .form .wall {
   border-bottom: 1px solid #3b3b3b30;
 }
 
-.home .box .search-box select {
+.home .box .search-box #all-makes {
   display: flex;
   flex-wrap: wrap;
   width: 230px;
@@ -400,10 +445,28 @@ nav .form .wall {
   outline-color: var(--main-color);
 }
 
+.home .box .search-box .price {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.home .box .search-box .price select {
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 10px -18px;
+  font-weight: normal;
+  font-size: 12px;
+  background-color: unset;
+  color: black;
+  border-radius: 6px;
+  outline-color: var(--main-color);
+}
+
 
 .home .box .search-box .search {
   position: absolute;
-  left: 50%;
+  left: 45%;
   top: 87%;
   transform: translate(-50%, -50%);
   padding: 15px 20px;
@@ -417,6 +480,23 @@ nav .form .wall {
 }
 
 .home .box .search-box .search:hover {
+  opacity: 0.85;
+}
+
+.home .box .search-box .query {
+  color: black;
+  position: absolute;
+  right: 23%;
+  bottom: 5%;
+  font-size: 25px;
+  padding: 11px 10px;
+  background-color: #7235eb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home .box .search-box .query:hover {
   opacity: 0.85;
 }
 
@@ -550,6 +630,11 @@ nav .form .wall {
   background-color: #eff3fa;
 }
 
+.used-cars .container {
+  display: flex;
+  flex-direction: column;
+}
+
 .used-cars .container .text {
   display: flex;
   justify-content: space-between;
@@ -590,8 +675,8 @@ nav .form .wall {
 
 .used-cars .container .imgs-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
 }
 
 .used-cars .container .imgs-container .box {
@@ -607,7 +692,7 @@ nav .form .wall {
 }
 
 .used-cars .container .imgs-container .box img {
-  width: 250px;
+  width: 100%;
   border-radius: 5% 5% 0 0;
   transition: 0.5s;
 }
@@ -661,23 +746,26 @@ nav .form .wall {
   color: black;
 }
 
-.used-cars .container i {
-  margin: 10px;
+
+
+
+.used-cars .change-background {
+  width: 200px;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+  align-self: center;
+  box-shadow: 0 0 15px #777;
+  margin-bottom: 20px;
+}
+
+.used-cars .change-background>i {
   position: relative;
   background-color: white;
   cursor: pointer;
-}
-
-.used-cars .fa-angle-left {
-  left: 20px;
-  padding: 10px 15px;
-  border-radius: 50%;
-}
-
-.used-cars .fa-angle-right {
-  left: 5px;
-  padding: 10px 15px;
-  border-radius: 50%;
+  color: #000000;
 }
 
 .about {
@@ -1053,6 +1141,8 @@ nav .form .wall {
   justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 30px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .compare .first-car {
@@ -1069,10 +1159,39 @@ nav .form .wall {
 }
 
 .compare .first-car h2 {
-  font-size: 36px
+  font-size: 36px;
+  text-align: center;
 }
 
-.compare .first-car form {
+.compare .first-car button {
+  display: flex;
+  margin: 40px auto;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  /* transition: 0.3s; */
+}
+
+.compare .first-car button:hover {
+  opacity: 0.9;
+}
+
+.compare .first-car select {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  background-color: #cccccc69;
+  outline-color: var(--main-color);
+}
+
+/* .compare .first-car form {
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -1084,7 +1203,7 @@ nav .form .wall {
   padding: 16px;
   border-radius: 5px;
   outline-color: var(--main-color);
-}
+} */
 
 .compare .second-car {
   width: 50%;
@@ -1100,10 +1219,39 @@ nav .form .wall {
 }
 
 .compare .second-car h2 {
-  font-size: 36px
+  font-size: 36px;
+  text-align: center;
 }
 
-.compare .second-car form {
+.compare .second-car button {
+  display: flex;
+  margin: 40px auto;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  /* transition: 0.3s; */
+}
+
+.compare .second-car button:hover {
+  opacity: 0.9;
+}
+
+.compare .second-car select {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  background-color: #cccccc69;
+  outline-color: var(--main-color);
+}
+
+/* .compare .second-car form {
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -1115,7 +1263,7 @@ nav .form .wall {
   padding: 16px;
   border-radius: 5px;
   outline-color: var(--main-color);
-}
+} */
 
 .compare a button {
   position: absolute;
@@ -1678,6 +1826,27 @@ nav .form .wall {
   color: #322a2ad1;
 }
 
+.car-view .car-card a button {
+  position: absolute;
+  bottom: -15%;
+  left: 25%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 35px;
+  background-color: #b29fc4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.car-view .car-card button:hover {
+  background-color: #7a26cb;
+}
+
+
 /* End Car view  */
 /* Start Profile */
 .profile {
@@ -1773,8 +1942,108 @@ nav .form .wall {
 
 /* Start Query  */
 .query {
-  padding-top: var(--section-padding);
+  padding-top: 20px;
   padding-bottom: var(--section-padding);
+  background-color: #dddddd6b;
+}
+
+.query .heading {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.query .heading h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.query .heading p {
+  color: gray;
+}
+
+.query .query-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.query .query-container .text {
+  width: calc(50% - 20px);
+  padding: 20px;
+  background-color: white;
+  max-height: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0px 1px 9px 0px #d3bc16f0;
+  position: relative;
+}
+
+.query .query-container .text h3 {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d3bc16;
+  padding-bottom: 35px;
+  padding-left: 25px;
+  width: 100%;
+  height: 79px
+}
+
+.query .query-container .text h3 span {
+  position: absolute;
+  font-size: 25px;
+  font-family: 'Font Awesome 6 Brands';
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  border: 3px solid #d3bc16f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  left: -25px;
+  top: -15px;
+}
+
+.query .query-container .text select {
+  padding: 10px;
+  width: 50%;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  outline-color: var(--main-color);
+  display: flex;
+  margin: 40px auto;
+}
+
+.query .query-container .text input {
+  padding: 10px;
+  border: none;
+  margin: 40px 0 40px 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.query input[type=submit] {
+  padding: 14px 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.query input[type=submit]:hover {
+  opacity: 0.7;
+}
+
+.query i {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 30px;
+  color: #99093ea3;
 }
 
 /* End Query  */

@@ -15,40 +15,45 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Jomhuria&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 </head>
 
 <body>
+  <a href="#home">
+    <span class="up"><i class="fa-solid fa-angle-up"></i></span>
+  </a>
   <!-- Start Header -->
-  <header>
-    <!-- <div class="container"> -->
-    <a href="#" class="logo">
-      <img src="images/logo.png" alt="logo">
-    </a>
-    <nav>
-      <div class="bars">
-        <i class="fa-solid fa-bars toggle-menu"></i>
-        <ul>
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#used-cars">Used Cars</a></li>
-          <li><a href="Sell-Car.html">Sell Car</a></li>
-          <li><a href="Compare-Cars.html">Compare Cars</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="query.html">Query Search</a></li>
-        </ul>
-      </div>
-      <div class="form">
-        <i class="fa-regular fa-user"></i>
-        <a href="login.html">Log in</a>
-        <a class="wall" href="sign-up.html">Sign up</a>
-        <a href="profile.html">Profile</a>
-      </div>
-    </nav>
-    <!-- </div> -->
-  </header>
+  <div class="bar">
+    <header>
+      <a href="index.html" class="logo" id="logo">
+        <img src="images/favpng_sports-car-logo.png" alt="logo">
+        <p>CarCraft</p>
+      </a>
+      <nav>
+        <div class="bars" id="bars">
+          <i class="fa-solid fa-bars toggle-menu"></i>
+          <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#used-cars">Used Cars</a></li>
+            <li><a href="Sell-Car.html">Sell Car</a></li>
+            <li><a href="Compare-Cars.html">Compare Cars</a></li>
+            <li><a href="query.html">Query Search</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="form">
+          <i class="fa-regular fa-user"></i>
+          <a href="login.html">Log in</a>
+          <a class="wall" href="sign-up.html">Sign up</a>
+          <a class="prof" href="profile.html">Profile</a>
+        </div>
+      </nav>
+    </header>
+  </div>
   <!-- End Header -->
   <!-- Start Home -->
   <div class="home" id="home">
@@ -67,14 +72,19 @@
           <select name="Makes" id="all-makes">
             <option value="All Makes">All Makes</option>
           </select>
-          <select name="Max Price" id="price">
-            <option value="Price">Max Price</option>
-          </select>
-          <select name="Year" id="years">
-            <option value="year">Min Price</option>
-          </select>
+          <div class="price">
+            <select name="Max Price" id="price">
+              <option value="Price">Min Price</option>
+            </select>
+            <select name="Year" id="years">
+              <option value="year">Max Price</option>
+            </select>
+          </div>
         </div>
-        <a class="search" href="search.html">Search <i class="fa-solid fa-magnifying-glass"> </i></a>
+        <a class="search" href="search.html">Search <i class=" fa-solid fa-magnifying-glass"> </i></a>
+        <a href="query.html">
+          <i class="query fa-solid fa-question "></i>
+        </a>
       </div>
     </div>
   </div>
@@ -204,13 +214,13 @@
   </div>
   <!-- End popular listing -->
   <!-- Start used-cars -->
-  <div class="used-cars" id="used-cars">
-    <div class="container">
+  <div class="used-cars " id="used-cars">
+    <div class="container  swiper mySwiper">
       <div class="text">
         <h2>Used Cars</h2>
       </div>
-      <div class="imgs-container">
-        <div class="box">
+      <div class="imgs-container  swiper-wrapper">
+        <div class="box swiper-slide">
           <a href="car-view.html">
             <img src="images/audi-1.jpg" alt="car photo">
             <div class="caption">
@@ -224,7 +234,7 @@
             </div>
           </a>
         </div>
-        <div class="box">
+        <div class="box swiper-slide">
           <a href="car-view.html">
             <img src="images/audi-2.jpg" alt="car photo">
             <div class="caption">
@@ -238,7 +248,7 @@
             </div>
           </a>
         </div>
-        <div class="box">
+        <div class="box swiper-slide">
           <a href="car-view.html">
             <img src="images/audi-3.jpg" alt="car photo">
             <div class="caption">
@@ -252,7 +262,21 @@
             </div>
           </a>
         </div>
-        <div class="box">
+        <div class="box swiper-slide">
+          <a href="car-view.html">
+            <img src="images/audi-2.jpg" alt="car photo">
+            <div class="caption">
+              <h4>Awesome Image</h4>
+              <span>40,000</span>
+              <ul>
+                <li class="active">2023</li>
+                <li>Automatic</li>
+                <li>Diesel</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div class="box swiper-slide">
           <a href="car-view.html">
             <img src="images/audi-4.jpg" alt="car photo">
             <div class="caption">
@@ -266,9 +290,54 @@
             </div>
           </a>
         </div>
+        <div class="box swiper-slide">
+          <a href="car-view.html">
+            <img src="images/audi-3.jpg" alt="car photo">
+            <div class="caption">
+              <h4>Awesome Image</h4>
+              <span>40,000</span>
+              <ul>
+                <li class="active">2023</li>
+                <li>Automatic</li>
+                <li>Diesel</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div class="box swiper-slide">
+          <a href="car-view.html">
+            <img src="images/audi-4.jpg" alt="car photo">
+            <div class="caption">
+              <h4>Awesome Image</h4>
+              <span>40,000</span>
+              <ul>
+                <li class="active">2023</li>
+                <li>Automatic</li>
+                <li>Diesel</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div class="box swiper-slide">
+          <a href="car-view.html">
+            <img src="images/audi-2.jpg" alt="car photo">
+            <div class="caption">
+              <h4>Awesome Image</h4>
+              <span>40,000</span>
+              <ul>
+                <li class="active">2023</li>
+                <li>Automatic</li>
+                <li>Diesel</li>
+              </ul>
+            </div>
+          </a>
+        </div>
       </div>
-      <i class="fas fa-angle-left change-background "></i>
-      <i class="fas fa-angle-right change-background "></i>
+      <div class="change-background">
+
+        <i class=" left swiper-button-prev "></i>
+        <i class=" right swiper-button-next "></i>
+      </div>
     </div>
   </div>
   <!-- End used-cars -->
@@ -333,7 +402,7 @@
   <div class="footer">
     <div class="container">
       <div class="content">
-        <img src="images/logo.png" alt="">
+        <img src="images/favpng_sports-car-logo.png" alt="">
         <ul>
           <li>Listings</li>
           <li>Blog</li>
@@ -346,7 +415,7 @@
           Lowest prices and the best customer service guaranteed.</p>
         <div class="info">
           <div class="phone">(123) <span> 456-78901 </span></div>
-          <h4>support@vehica.com</h4>
+          <h4>support@carcraft.com</h4>
           <address>East 12th Street <br> ALexandria,Alex,Egypt</address>
         </div>
       </div>
@@ -365,6 +434,37 @@
   <df-messenger intent="WELCOME" chat-title="FAQ" agent-id="48515d9d-484a-4b7b-8c5b-2d3ac9b18ea1"
     language-code="en"></df-messenger>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        waitForTransition: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        440: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>
