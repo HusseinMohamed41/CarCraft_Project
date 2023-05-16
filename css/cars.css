@@ -491,13 +491,15 @@ nav .form .prof {
   font-size: 25px;
   padding: 11px 10px;
   background-color: #7235eb;
+  background-color: #b29fc4;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .home .box .search-box .query:hover {
-  opacity: 0.85;
+  /* opacity: 0.85; */
+  background-color: #7235eb;
 }
 
 /* End Home */
@@ -1041,9 +1043,12 @@ nav .form .prof {
 .login-page .login .forget-password a {
   margin-left: 170px;
   color: black;
+  text-decoration: underline;
 }
 
 .login-page .login input[type=submit] {
+  width: 150px;
+  margin: auto;
   padding: 14px 40px;
   background-color: var(--secondary-color);
   color: white;
@@ -1099,8 +1104,9 @@ nav .form .prof {
 
 
 .signup-page .signup input[type=submit] {
+  width: 150px;
   padding: 14px 40px;
-  margin-left: 45px;
+  margin: auto;
   background-color: var(--secondary-color);
   color: white;
   border: none;
