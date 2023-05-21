@@ -451,7 +451,7 @@ nav .form .prof {
   margin-bottom: 15px;
 }
 
-.home .box .search-box .price select {
+.home .box .search-box .price input {
   width: 106px;
   padding: 10px 15px;
   margin: 10px -18px;
@@ -459,10 +459,14 @@ nav .form .prof {
   font-size: 12px;
   background-color: unset;
   color: black;
+  border: none;
+  border: 1px solid #3b3b3b;
   border-radius: 6px;
-  outline-color: var(--main-color);
 }
 
+.home .box .search-box .price input:focus {
+  border-color: var(--main-color);
+}
 
 .home .box .search-box .search {
   position: absolute;
@@ -694,7 +698,7 @@ nav .form .prof {
 }
 
 .used-cars .container .imgs-container .box img {
-  width: 100%;
+  width: 255px;
   border-radius: 5% 5% 0 0;
   transition: 0.5s;
 }
@@ -1037,11 +1041,12 @@ nav .form .prof {
 
 .login-page .login .forget-password {
   font-size: 14px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+  margin-top: 20px;
 }
 
 .login-page .login .forget-password a {
-  margin-left: 170px;
+  margin-left: 165px;
   color: black;
   text-decoration: underline;
 }
@@ -1102,11 +1107,15 @@ nav .form .prof {
   border: none;
 }
 
+.signup-page .signup .signup-button {
+  margin-top: 30px;
+}
 
-.signup-page .signup input[type=submit] {
+
+.signup-page .signup .signup-button input[type=submit] {
   width: 150px;
   padding: 14px 40px;
-  margin: auto;
+  margin-left: 35px;
   background-color: var(--secondary-color);
   color: white;
   border: none;
@@ -1536,23 +1545,15 @@ nav .form .prof {
   background-color: #f2f2f2;
 }
 
-/* .sell-car form .description .main-input {
-  height: 150px;
-  width: 60%;
+.sell-car form .image .info-box input[type=text] {
+  padding: 10px 15px;
   outline: none;
-  padding: 10px;
-  margin: 15px 10px;
-  caret-color: var(--secondary-color);
-} */
-
-
-.sell-car .container input[type=image] {
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translatex(50%);
-  border-radius: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  width: fit-content;
+  width: 50%;
+  cursor: pointer;
 }
 
 .sell-car .container input[type=submit] {
@@ -1781,16 +1782,18 @@ nav .form .prof {
   position: relative;
 }
 
+.car-view .car-card {
+  display: flex;
+}
+
 .car-view .car-card img {
-  width: 50%;
+  width: 700px;
+  height: 500px;
   border-radius: 10px;
 }
 
 .car-view .car-card .car-info {
   margin-left: 50px;
-  position: absolute;
-  left: 50%;
-  top: 0;
 }
 
 .car-view .car-card .car-info h2 {

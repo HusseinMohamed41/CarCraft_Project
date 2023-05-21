@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo" href="images/favpng_sports-car-logo.png" type="image/icon type">
   <title>Car DSS Project</title>
   <!-- Render all elements normally -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -74,6 +75,18 @@
             <option value="year">2023</option>
             <option value="year">2022</option>
           </select>
+          <select name="power" id="power">
+            <option value="power">Power</option>
+          </select>
+          <select name="color" id="color">
+            <option value="color">Color</option>
+          </select>
+          <select name="engine" id="engine">
+            <option value="engine">Engine Size</option>
+          </select>
+          <select name="cylinders" id="cylinders">
+            <option value="cylinders">Cylinders</option>
+          </select>
         </div>
         <div class="personal">
           <h4>Personal Details:</h4>
@@ -111,13 +124,14 @@
             <input type="text">
           </div>
         </div>
-        <!-- <div class="description">
-          <h4>Description</h4>
-          <textarea class="main-input" name="description"></textarea>
-        </div> -->
+        <div class="image">
+          <h4>Image</h4>
+          <div class="info-box">
+            <input type="text" placeholder=" choose image ">
+          </div>
+        </div>
+        <input type="submit" value="Upload" />
       </form>
-      <input type="image" src="images/audi-4.jpg" alt="Upload Photo">
-      <input type="submit" value="Upload" />
     </div>
   </div>
   <!-- End Sell-car  -->

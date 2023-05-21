@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo" href="images/favpng_sports-car-logo.png" type="image/icon type">
   <title>Car DSS Project</title>
   <!-- Render all elements normally -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -59,11 +60,12 @@
           <input class="input" type="email" name="name" placeholder="Email*">
           <input class="input" type="text" name="phone" placeholder="Phone">
           <input class="input" type="password" name="password" placeholder="Password*">
-          <input type="submit" value="SignUp">
+          <div class="signup-button">
+            <input type="checkbox" name="Remember" id="checkbox" required>
+            <label for="checkbox">I accept the privacy policy</label>
+            <input type="submit" value="SignUp">
+          </div>
         </form>
-        <input type="checkbox" name="Remember" id="checkbox">
-        <label for="checkbox">I accept the privacy policy</label>
-
       </div>
     </div>
   </div>
