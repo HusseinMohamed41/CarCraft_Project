@@ -451,7 +451,7 @@ nav .form .prof {
   margin-bottom: 15px;
 }
 
-.home .box .search-box .price input {
+.home .box .search-box .price input[type=text] {
   width: 106px;
   padding: 10px 15px;
   margin: 10px -18px;
@@ -1040,6 +1040,9 @@ nav .form .prof {
 }
 
 .login-page .login .forget-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   margin-bottom: 60px;
   margin-top: 20px;
@@ -1108,6 +1111,9 @@ nav .form .prof {
 }
 
 .signup-page .signup .signup-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
 }
 
@@ -1206,20 +1212,6 @@ nav .form .prof {
   outline-color: var(--main-color);
 }
 
-/* .compare .first-car form {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-.compare .first-car form select {
-  margin-top: 20px;
-  height: 56px;
-  padding: 16px;
-  border-radius: 5px;
-  outline-color: var(--main-color);
-} */
-
 .compare .second-car {
   width: 50%;
   margin-left: 3.5rem;
@@ -1266,19 +1258,6 @@ nav .form .prof {
   outline-color: var(--main-color);
 }
 
-/* .compare .second-car form {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-.compare .second-car form select {
-  margin-top: 20px;
-  height: 56px;
-  padding: 16px;
-  border-radius: 5px;
-  outline-color: var(--main-color);
-} */
 
 .compare a button {
   position: absolute;
@@ -1577,7 +1556,6 @@ nav .form .prof {
   padding-top: 20px;
   padding-bottom: var(--section-padding);
   background-color: #eff3fa;
-  /* background-image: linear-gradient(to bottom, #eff3fa 13%, white 13%); */
 }
 
 .search .container {
